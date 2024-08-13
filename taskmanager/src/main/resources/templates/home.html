@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <h1>Task Manager</h1>
+    <nav>
+        <a href="/tasks">Task List</a>
+        <a href="/tasks/form">Add New Task</a>
+        <a href="/login">Logout</a>
+    </nav>
+</header>
+<main>
+    <div>
+        <div th:if="${#authentication?.principal != null}">
+            <h2>Welcome back, <span th:text="${#authentication.principal.username}"></span>!</h2>
+            <p>Here’s your dashboard.</p>
+        </div>
+        <div th:if="${#authentication?.principal == null}">
+        </div>
+    </div>
+</main>
+</body>
+</html>

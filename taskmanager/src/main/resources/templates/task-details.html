@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details</title>
+</head>
+<body>
+<h1>Task Details</h1>
+<p><strong>Title:</strong> <span th:text="${task.title}"></span></p>
+<p><strong>Description:</strong> <span th:text="${task.description}"></span></p>
+<p><strong>Status:</strong> <span th:text="${task.status}"></span></p>
+<p><strong>Due Date:</strong> <span th:text="${task.dueDate}"></span></p>
+<p><strong>Created By:</strong> <span th:text="${task.user.username}"></span></p>
+<a href="/tasks">Back to Task List</a>
+</body>
+</html>
